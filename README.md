@@ -1,20 +1,20 @@
-# Lab 4 - *Name of App Here*
+# Lab 4 - *Parse Chat*
 
-**Name of your app** is a Chat app using an [open source Parse](http://parseplatform.org/) backend.
+**Parse Chat** is a Chat app using an [open source Parse](http://parseplatform.org/) backend.
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
 The following **required** user stories are complete:
 
-- [ ] User can sign up and sign in to the login screen (+1pt)
-- [ ] User sees alerts for login exceptions, i.e. "account already exists", "wrong credentials", etc. (+1pt)
-- [ ] User can compose and send chat messages (+2pt)
-- [ ] User can view a list of chat messages in chronological order (+2pt)
-- [ ] Automatically Adjust Cell Size to Fit Text (+1pt)
-- [ ] Username of chat author is displayed in each chat message (+2pt)
-- [ ] Persist Logged in User (+1pt)
+- [x] User can sign up and sign in to the login screen (+1pt)
+- [x] User sees alerts for login exceptions, i.e. "account already exists", "wrong credentials", etc. (+1pt)
+- [x] User can compose and send chat messages (+2pt)
+- [x] User can view a list of chat messages in chronological order (+2pt)
+- [x] Automatically Adjust Cell Size to Fit Text (+1pt)
+- [x] Username of chat author is displayed in each chat message (+2pt)
+- [x] Persist Logged in User (+1pt)
 
 The following **stretch** user stories are implemented:
 
@@ -30,24 +30,25 @@ The following **additional** user stories are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. I had issues with the server given to us so I had to make my own server on heroku to get it to run. I want to discuss what exactly happened as my application was working a few days ago. 
+2. 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![parse_chat_lab_4](https://user-images.githubusercontent.com/8825679/46318841-7481c880-c59d-11e8-91c4-e76b7f43fe28.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The only challenge I had was while I was displaying the username. At one point all the usernames were the same but then I figured out 
+I was accessing the wrong element in my messagesArray and that fixed the issue!
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Vidhu Appalaraju]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
