@@ -28,6 +28,18 @@ class LoginViewController: UIViewController {
         let username = usernameField.text ?? ""
         let password = passwordField.text ?? ""
         
+        if(usernameField.text!.isEmpty || passwordField.text!.isEmpty){
+            let alertController = UIAlertController(title: "Username and Password Required", message: "Please enter a username and password", preferredStyle: .alert)
+            let TryAgainAction = UIAlertAction(title: "Try Again", style: .default) { (action) in
+                // handle response here.
+            }
+            alertController.addAction(TryAgainAction)
+            self.present(alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
+            return
+        }
+        
         PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
             if let error = error {
                 print("User log in failed: \(error.localizedDescription)")
@@ -44,6 +56,19 @@ class LoginViewController: UIViewController {
         
         newUser.username = usernameField.text
         newUser.password = passwordField.text
+        
+        if(usernameField.text!.isEmpty || passwordField.text!.isEmpty){
+             let alertController = UIAlertController(title: "Username and Password Required", message: "Please enter a username and password", preferredStyle: .alert)
+            let TryAgainAction = UIAlertAction(title: "Try Again", style: .default) { (action) in
+                // handle response here.
+            }
+            alertController.addAction(TryAgainAction)
+            self.present(alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
+            return
+        }
+        
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if let error = error {
                 print(error.localizedDescription)

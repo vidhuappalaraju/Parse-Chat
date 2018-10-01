@@ -19,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
-            configuration.applicationId = "CodePath-Parse"
-            configuration.server = "http://45.79.67.127:1337/parse"
+            configuration.applicationId = "parse-chat"
+             configuration.clientKey = "2unt3utni3t2dm329d8929"
+            configuration.server = "http://boiling-fjord-44900.herokuapp.com/parse"
         })
         )
         if let currentUser = PFUser.current() {

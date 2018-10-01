@@ -78,24 +78,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a Message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-ik-jfw">
-                                <rect key="frame" x="16" y="79" width="277" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a Message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-ik-jfw">
+                                <rect key="frame" x="8" y="72" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gut-mr-lA3">
-                                <rect key="frame" x="318" y="79" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gut-mr-lA3">
+                                <rect key="frame" x="331" y="72" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendMessage:" destination="FsF-ms-yJP" eventType="touchUpInside" id="zln-wG-caT"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="McC-gD-j1G">
-                                <rect key="frame" x="0.0" y="117" width="375" height="500"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="McC-gD-j1G">
+                                <rect key="frame" x="0.0" y="110" width="375" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="89" id="T3i-sB-sXr" customClass="ChatCell" customModule="Parse_Chat" customModuleProvider="target">
@@ -137,6 +134,17 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="McC-gD-j1G" firstAttribute="leading" secondItem="xFM-dZ-6Ia" secondAttribute="leading" id="4yg-dr-NZK"/>
+                            <constraint firstItem="cZc-ik-jfw" firstAttribute="top" secondItem="xFM-dZ-6Ia" secondAttribute="top" constant="8" id="5V3-TQ-Dm6"/>
+                            <constraint firstItem="xFM-dZ-6Ia" firstAttribute="trailing" secondItem="gut-mr-lA3" secondAttribute="trailing" constant="8" id="9Up-K6-VLS"/>
+                            <constraint firstItem="McC-gD-j1G" firstAttribute="top" secondItem="cZc-ik-jfw" secondAttribute="bottom" constant="8" id="Eps-uG-dKV"/>
+                            <constraint firstItem="cZc-ik-jfw" firstAttribute="leading" secondItem="xFM-dZ-6Ia" secondAttribute="leading" constant="8" id="I6M-7C-H0p"/>
+                            <constraint firstItem="McC-gD-j1G" firstAttribute="trailing" secondItem="xFM-dZ-6Ia" secondAttribute="trailing" id="IgD-Ta-1Cf"/>
+                            <constraint firstItem="gut-mr-lA3" firstAttribute="top" secondItem="xFM-dZ-6Ia" secondAttribute="top" constant="8" id="SWg-ch-Rxc"/>
+                            <constraint firstItem="gut-mr-lA3" firstAttribute="leading" secondItem="cZc-ik-jfw" secondAttribute="trailing" constant="8" id="WIF-BK-Lnl"/>
+                            <constraint firstItem="xFM-dZ-6Ia" firstAttribute="bottom" secondItem="McC-gD-j1G" secondAttribute="bottom" constant="50" id="gDe-Cs-tsR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xFM-dZ-6Ia"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="aOM-pp-MrX"/>
